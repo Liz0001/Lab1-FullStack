@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "the Hunter from the Future",
+    "artist": "Creighton Snelson",
+    "year": 1957
+  },
+  {
+    "id": 2,
+    "title": "I Heart Monster",
+    "artist": "Janella Bunting",
+    "year": 1971
+  },
+  {
+    "id": 3,
+    "title": "Trial of the Incredible",
+    "artist": "Amalita Baldassi",
+    "year": 1981
+  },
+  {
+    "id": 4,
+    "title": "That's the Way It Is",
+    "artist": "Adore Baudinelli",
+    "year": 1995
+  },
+  {
+    "id": 5,
+    "title": "Fear[s] of the Dark (Peur[s] du noir)",
+    "artist": "Jed Ygoe",
+    "year": 1997
+  },
+  {
+    "id": 6,
+    "title": "Hangover Part",
+    "artist": "Bobbette Paley",
+    "year": 1980
+  },
+  {
+    "id": 7,
+    "title": "Suburbans",
+    "artist": "Demetris Etherington",
+    "year": 1955
+  },
+  { "id": 8, "title": "Primary Colors", "artist": "Darda Bento", "year": 1970 },
+  { "id": 9, "title": "The Boot", "artist": "Eugen Spens", "year": 1975 },
+  { "id": 10, "title": "The Odds", "artist": "Cecilla McCleod", "year": 1976 },
+  { "id": 11, "title": "Hawking", "artist": "Marlie Fenne", "year": 1975 },
+  { "id": 12, "title": "Motocrossed", "artist": "Nelly Dyhouse", "year": 1970 },
+  { "id": 13, "title": "BloodRayne", "artist": "Aveline Ellins", "year": 1991 },
+  {
+    "id": 14,
+    "title": "Sharpe's Eagle",
+    "artist": "Selie Neild",
+    "year": 2008
+  },
+  {
+    "id": 15,
+    "title": "Battle of Britain",
+    "artist": "Genna Paschek",
+    "year": 2022
+  },
+  {
+    "id": 16,
+    "title": "The Keeper",
+    "artist": "Davis Weatherburn",
+    "year": 1962
+  },
+  {
+    "id": 17,
+    "title": "Something's Gonna Live",
+    "artist": "Cassie Ailsbury",
+    "year": 1967
+  },
+  { "id": 18, "title": "Company", "artist": "Carrol Kelcey", "year": 1962 },
+  {
+    "id": 19,
+    "title": "The Visitor",
+    "artist": "Constantia Clara",
+    "year": 2017
+  },
+  { "id": 20, "title": "Eila", "artist": "Marthe Ciciura", "year": 2005 },
+  {
+    "id": 21,
+    "title": "Another Happy Day",
+    "artist": "Juline Yanshinov",
+    "year": 1962
+  },
+  {
+    "id": 22,
+    "title": "Sixpack (Pussikaljaelokuva)",
+    "artist": "Grove Kertess",
+    "year": 1976
+  },
+  {
+    "id": 23,
+    "title": "Nekromantik 2",
+    "artist": "Charo Bartaloni",
+    "year": 2022
+  },
+  {
+    "id": 24,
+    "title": "Hearts and Minds",
+    "artist": "Brandea Barizeret",
+    "year": 1955
+  },
+  { "id": 25, "title": "Backbeat", "artist": "Earl Harling", "year": 1984 }
+]
