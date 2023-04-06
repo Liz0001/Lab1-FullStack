@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Lab1</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <main>
+      <h1>Album Shack</h1>
+      <p>The best albums database!</p>
+      <div class="box">
+        <h3 class="heading">Look up all the albums</h3>
+        <button class="allAlbumsButton">See all albums</button>
+        <div class="inputSection">
+          <h3>Search, create, update or delete an album!</h3>
+
+          <input class="inputTitle" type="text" placeholder="Enter TITLE" />
+          <input class="inputAuthor" type="text" placeholder="Enter ARTIST" />
+          <input class="inputYear" type="text" placeholder="Enter YEAR" />
+        </div>
+
+        <button class="searchButton">Search by title</button>
+        <button class="createButton">Create an album</button>
+        <button class="updateButton">Update an album</button>
+        <button class="deleteButton">Delete an album</button>
+      </div>
+
+      <div class="albumArea">Empty</div>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

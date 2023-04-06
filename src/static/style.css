@@ -1,0 +1,28 @@
+main {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 200px;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 30px 30px;
+  background-color: rgba(95, 158, 160, 0.322);
+  border-radius: 10px;
+}
+
+button,
+input {
+  margin: 10px 0;
+  padding: 10px 25px;
+}
+.inputSection input {
+  width: 55%;
+  display: block;
+}
+
+.heading {
+  margin-bottom: 00px;
+}
