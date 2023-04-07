@@ -21,8 +21,7 @@ const albumArea = document.querySelector(".albumArea");
 allAlbumsButton.addEventListener("click", async (event) => {
   const albums = await getAllAlbums();
   const value = Promise.resolve(albums);
-  // console.log("value", value);
-  let result = "";
+  let result = "<h3>All the albums:</h3>";
   let i = 1;
   value
     .then((text) => {
@@ -56,7 +55,6 @@ async function getAllAlbums() {
       return;
     }
     const res = await result.json();
-    console.log("res", res[0]);
     return res;
   } catch (error) {
     console.log(error);
@@ -65,31 +63,58 @@ async function getAllAlbums() {
 
 /////////////////////////////////////
 // search for one by title
-// searchButton.addEventListener("click", async (event) => {
-//   const album = await searchByTitle(inputTitle.value);
-//   const value = Promise.resolve(album);
-//   console.log("getting the value", value);
-//   value
-//     .then((text) => {
-//       albumArea.innerHTML = text;
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
+searchButton.addEventListener("click", async (event) => {
+  const input = inputTitle.value;
+  if (input == "") {
+    return;
+  }
+  const album = await searchByTitle(input);
+  let result = `<h3>Searched by Title: "${input}"</h3>`;
 
-// // Functions section
-// async function searchByTitle(title) {
-//   try {
-//     let result = await fetch(`http://localhost:3000/api/albums/${title}`, {
-//       method: "GET",
-//       headers: { "content-type": "application/json" },
-//     });
-//     if (result.status !== 200) {
-//       return;
-//     }
-//     return await result.json();
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+  if (album == undefined) {
+    result += "<p>Album not found</p>";
+    albumArea.innerHTML = result;
+    return;
+  }
+
+  const value = Promise.resolve(album);
+  let i = 1;
+  value
+    .then((text) => {
+      text.forEach(function (t) {
+        result +=
+          "<div class='album'>Album " +
+          i++ +
+          ": <p>Title: " +
+          t.title +
+          "</p><p>Artist: " +
+          t.artist +
+          "</p><p>Year: " +
+          t.year +
+          "</p></div>";
+      });
+
+      albumArea.innerHTML = result;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+async function searchByTitle(title) {
+  try {
+    let result = await fetch(`http://localhost:3000/api/albums/${title}`, {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    });
+    if (result.status !== 200) {
+      return;
+    }
+    return await result.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/////////////////////////////////////
+// search for one by title
