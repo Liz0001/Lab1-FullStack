@@ -21,14 +21,22 @@ const albumArea = document.querySelector(".albumArea");
 allAlbumsButton.addEventListener("click", async (event) => {
   const albums = await getAllAlbums();
   const value = Promise.resolve(albums);
-  console.log("value", value);
+  // console.log("value", value);
   let result = "";
+  let i = 1;
   value
     .then((text) => {
-      // albumArea.innerHTML = text;
-
       text.forEach(function (t) {
-        result += "<p>" + t.title + " " + t.artist + " " + t.year + "</p>";
+        result +=
+          "<div class='album'>Album " +
+          i++ +
+          ": <p>Title: " +
+          t.title +
+          "</p><p>Artist: " +
+          t.artist +
+          "</p><p>Year: " +
+          t.year +
+          "</p></div>";
       });
 
       albumArea.innerHTML = result;
