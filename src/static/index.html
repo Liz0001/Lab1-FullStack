@@ -15,28 +15,21 @@
         <h3 class="heading">Check out all the albums</h3>
         <button class="allAlbumsButton">See all albums</button>
         <div class="inputSection">
-          <h3>Search, create, update or delete an album!</h3>
-          <div class="requiredSection">
-            <p><small>To Search: *TITLE field</small></p>
-            <p>
-              <small>To Create: *TITLE, *ARTIST, *YEAR fields</small>
-            </p>
-            <p>
-              <small>To Update: *ID + the field you wish to update</small>
-            </p>
-            <p><small>To Delete: *ALL fields</small></p>
-          </div>
+          <h3>Search for an album!</h3>
 
-          <input class="inputID" type="text" placeholder="Enter ID" />
           <input class="inputTitle" type="text" placeholder="Enter TITLE" />
           <input class="inputArtist" type="text" placeholder="Enter ARTIST" />
-          <input class="inputYear" type="text" placeholder="Enter YEAR" />
+          <input
+            class="inputYear"
+            type="number"
+            placeholder="Enter YEAR"
+            min="1"
+            max="2050"
+          />
         </div>
 
         <button class="searchButton">Search by title</button>
         <button class="createButton">Create an album</button>
-        <button class="updateButton">Update an album</button>
-        <button class="deleteButton">Delete an album</button>
       </div>
 
       <div class="albumArea">Currently nothing to show!</div>

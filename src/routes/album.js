@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const MusicAlbum = require("../models/albumsModel.js");
-const { testStr } = require("../utilities/testStr.js");
+const { validStr } = require("../utilities/validStr.js");
 
 router.get("/", async (req, res) => {
   try {
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:title", async (req, res) => {
   const t = req.params.title;
-  if (!testStr(t)) {
+  if (!validStr(t)) {
     res.status(405).json({ message: "Some characters not allowed!" });
     return;
   }
@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
   let a = req.body.artist;
   let y = req.body.year;
 
-  if (!testStr(t) || !testStr(a) || typeof y !== "number" || y < 1) {
+  if (!validStr(t) || !validStr(a) || typeof y !== "number" || y < 1) {
     res.status(405).json({ message: "Some characters not allowed!" });
     return;
   }
@@ -79,20 +79,19 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   let i = req.params.id;
-
   let t = req.body.title;
   let a = req.body.artist;
-  let y = Number(req.body.year);
+  let y = req.body.year;
 
   let exists = (await MusicAlbum.find({ id: i }).count()) > 0;
   if (!exists) {
-    res.status(404).json({ message: "Album not found!" });
+    res.json({ message: "Album not found!" });
     return;
   }
-  if (t !== "" && testStr(t)) {
+  if (t !== "" && validStr(t)) {
     await MusicAlbum.updateOne({ id: i }, { $set: { title: t } });
   }
-  if (a !== "" && testStr(a)) {
+  if (a !== "" && validStr(a)) {
     await MusicAlbum.updateOne({ id: i }, { $set: { artist: a } });
   }
   if (y !== "" && typeof y === "number" && y > 0) {

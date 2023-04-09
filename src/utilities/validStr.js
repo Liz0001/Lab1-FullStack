@@ -1,4 +1,4 @@
-function testStr(str) {
+function validStr(str) {
   const pattern = /^[a-zA-Z0-9\s,'.!?-]+$/;
 
   if (pattern.test(str)) {
@@ -9,4 +9,4 @@ function testStr(str) {
   }
 }
 
-module.exports = { testStr };
+module.exports = { validStr };
