@@ -69,7 +69,6 @@ router.post("/", async (req, res) => {
 
   try {
     const a1 = await album.save();
-    console.log(a1);
     res.status(201).json([a1]);
   } catch (err) {
     res.sendStatus(400);
