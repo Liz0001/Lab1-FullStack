@@ -12,7 +12,10 @@ require("dotenv").config();
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:3000",
+      "https://express-mongodb-application.onrender.com/",
+    ],
   })
 );
 app.use(
@@ -23,10 +26,10 @@ app.use(
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`, req.body);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.url}`, req.body);
+//   next();
+// });
 
 app.use(express.static(staticPath));
 
