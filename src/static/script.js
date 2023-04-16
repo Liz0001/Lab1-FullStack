@@ -61,10 +61,13 @@ allAlbumsButton.addEventListener("click", async (event) => {
 
 async function getAllAlbums() {
   try {
-    let result = await fetch("http://localhost:3000/api/albums", {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-    });
+    let result = await fetch(
+      "https://express-mongodb-application.onrender.com/api/albums",
+      {
+        method: "GET",
+        headers: { "content-type": "application/json" },
+      }
+    );
     if (result.status !== 200) {
       return;
     }
@@ -127,10 +130,13 @@ searchButton.addEventListener("click", async (event) => {
 
 async function searchByTitle(title) {
   try {
-    let result = await fetch(`http://localhost:3000/api/albums/${title}`, {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-    });
+    let result = await fetch(
+      `https://express-mongodb-application.onrender.com/api/albums/${title}`,
+      {
+        method: "GET",
+        headers: { "content-type": "application/json" },
+      }
+    );
     if (result.status !== 200) {
       return;
     }
@@ -196,13 +202,16 @@ createButton.addEventListener("click", async (event) => {
 
 async function addAlbum(newAlbum) {
   try {
-    const result = await fetch("http://localhost:3000/api/albums", {
-      method: "POST",
-      body: JSON.stringify(newAlbum),
-      headers: {
-        "content-type": "application/json",
-      },
-    });
+    const result = await fetch(
+      "https://express-mongodb-application.onrender.com/api/albums",
+      {
+        method: "POST",
+        body: JSON.stringify(newAlbum),
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
 
     if (result.status !== 201) {
       return;
@@ -279,13 +288,16 @@ albumArea.addEventListener("click", (event) => {
 
 async function updateAlbum(id, data) {
   try {
-    const result = await fetch(`http://localhost:3000/api/albums/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const result = await fetch(
+      `https://express-mongodb-application.onrender.com/api/albums/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (result.status !== 200) {
       return;
@@ -331,12 +343,15 @@ albumArea.addEventListener("click", async (event) => {
 
 async function deleteAlbum(id) {
   try {
-    const result = await fetch("http://localhost:3000/api/albums/" + id, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
-      },
-    });
+    const result = await fetch(
+      "https://express-mongodb-application.onrender.com/api/albums/" + id,
+      {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
     if (result.status !== 200) {
       return;
     }
