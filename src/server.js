@@ -23,10 +23,10 @@ app.use(
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`, req.body);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.url}`, req.body);
+//   next();
+// });
 
 app.use(express.static(staticPath));
 
