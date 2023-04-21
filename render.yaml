@@ -3,4 +3,4 @@ services:
     name: webdis
     env: node
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: npm run dev
